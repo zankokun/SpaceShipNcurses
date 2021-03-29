@@ -13,6 +13,12 @@ ${PROJECT_SOURCE_DIR}/src/Point.cc
 ${PROJECT_SOURCE_DIR}/src/Stone.cc
 )
 
+# uncomment to enable draw debugging
+#target_compile_definitions(spaceship
+#    PRIVATE
+#   DRAWDEBUG
+#)
+
 # Ncures preparations
 find_package(Curses REQUIRED)
 

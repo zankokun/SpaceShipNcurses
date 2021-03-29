@@ -7,7 +7,7 @@
 
 void drawPixel(int x, int y, char c)
 {
-#ifdef DEBUG
+#ifdef DRAWDEBUG
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
     refresh();
 #endif
@@ -88,7 +88,7 @@ class Stone{
     void clear(){
         for(auto i=0; i<points.size(); ++i){
             drawLine(points[i], points[(i+1)%points.size()], ' ');
-            #ifdef DEBUG
+            #ifdef DRAWDEBUG
             mvprintw(points[i].y+1, points[i].x+1, "%c", ' ');
             #endif
         }
