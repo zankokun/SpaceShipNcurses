@@ -241,11 +241,10 @@ int main(){
 
         // drawing here
         for(auto& stone:stones){
-            stone.update(map);
+            stone.draw();
         }
-        stone.draw();
         ship.draw();
-        
+
         move(map.getHeight(),map.getWidth());
         //  update screen
         refresh();
